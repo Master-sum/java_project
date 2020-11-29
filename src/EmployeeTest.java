@@ -6,7 +6,7 @@ public class EmployeeTest {
         mo[0] = new Employee("bai", 12000, 2020, 11, 12);
         mo[1] = new Employee("jin", 12000, 2020, 11, 13);
         mo[2] = new Employee("xing", 12000, 2020, 11, 14);
-
+//
         for(Employee e:mo)
             e.raise(5);
         for (Employee e:mo)
