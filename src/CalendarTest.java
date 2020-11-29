@@ -11,10 +11,9 @@ public class CalendarTest {
 //        获取当前的日期
         int d = T.getDayOfMonth();
 //        当前日期 - 已过去的天数（today - 1）
-        T = T.minusDays(m-1);
-        System.out.println(T.getDayOfWeek().getValue());
+        T = T.minusDays(m-1);//这里是前11天后一天
+        System.out.println(T);
         DayOfWeek weekday = T.getDayOfWeek();
-        System.out.println(T.getDayOfWeek().getValue());
 
 //        获取星期几
         int Value = weekday.getValue();
@@ -22,7 +21,7 @@ public class CalendarTest {
         System.out.println("Mon Tue Wed Thu Fri Sat Sun");
 
         for (int i=1;i<Value;i++)
-            System.out.println(" ");
+            System.out.print("    ");
         while (T.getMonthValue() == m)
         {
             System.out.printf("%3d",T.getDayOfMonth());
@@ -32,9 +31,7 @@ public class CalendarTest {
                 System.out.print(" ");
             T = T.plusDays(1);
             if (T.getDayOfWeek().getValue() == 1) System.out.println();
-
         }
         if (T.getDayOfWeek().getValue() != 1) System.out.println();
     }
-
 }
